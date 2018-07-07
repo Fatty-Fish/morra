@@ -1,0 +1,39 @@
+.text-center{
+    margin: 0 auto;
+    text-align: center;
+}
+.context-bold {
+    font-weight: bold;
+}
+.countTime {
+    font-weight:bold;
+    font-size: 65px;
+    color: rgba(94, 91, 57, 0.959);
+}
+.clearlogs, .content{
+    border: 1px solid black;
+    background-color:rgba(235, 228, 155, 0.959);
+    color: rgba(94, 91, 57, 0.959);    
+    line-height:97px;
+    font-weight:bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+.clearlogs {
+    background-color:rgba(216, 43, 30, 0.301);    
+}
+.field {
+    display: inline-block;
+    width: 60%;
+    background-color: lightgoldenrodyellow;
+    border: 1px solid rgba(190, 176, 11, 0.959);
+    box-shadow: 2px 2px 2px rgba(114, 105, 7, 0.959);
+}
+.field img {
+    width:50%;
+    height:50%;
+}
+.logs{
+    margin-top:10px;
+    width:80%;
+}

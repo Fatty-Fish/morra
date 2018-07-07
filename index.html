@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./out/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app" class="container-fluid">
+        <section class="row">
+            <div class="col-md-3 col-xs-4 column clearlogs text-center" @click = "clearlogs">清空</div>
+            <div class="col-md-3 col-xs-4 column content text-center" @click="scissors">
+                剪刀
+            </div>
+            <div class="col-md-3 col-xs-4 column content text-center" @click="rock">
+                石头
+            </div>
+            <div class="col-md-3 col-xs-4 column content text-center" @click="paper">
+                布
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-md-6 col-xs-6 column text-center">
+                <h1>电脑</h1>
+                <div class="field">
+                    <img src="./out/images/1.png" v-if="choice1 === 1">
+                    <img src="./out/images/2.png" v-else-if="choice1 === 2">
+                    <img src="./out/images/3.png" v-else>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-6 column text-center">
+                <h1>玩家</h1>
+                <div class="field">
+                    <img src="./out/images/1.png" v-if="choice2 === 1">
+                    <img src="./out/images/2.png" v-else-if="choice2 === 2">
+                    <img src="./out/images/3.png" v-else>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="row">
+            <ul class="list-group text-center logs">
+                <li v-for = "log in logs" class="list-group-item context-bold" :class = "{'list-group-item-success':log.competition == 'player','list-group-item-danger':log.competition == 'computer','list-group-item-info':log.competition == 'tie'}">{{log.templates}}</li>
+            </ul>
+        </section>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
